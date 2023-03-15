@@ -1,41 +1,38 @@
 import math
 import random
 
-#
-# sinStuff = math.sin(35)
-# print(sinStuff)
-# cosStuff = math.cos(45)
-# print(cosStuff)
+
 
 
 # Here im printing stuff
 
 print("-----------------------")
-print("something") # This is me printing
+# print("something") # This is me printing
 
 
 #variable stores information
 #integer (int) variable holds a whole number
 
-# age = 5
-# print(age*20)
+age = 5
+# print(age*10)
 # print(type(age))
 
 # something is the variable, 25 is the information
 
 #floating point variable holds a decimal
 
-# decimalStuff = 12.2
-# print(age)
+decimalStuff = 12.0
+age = 10
 # print(decimalStuff)
+# print(type(decimalStuff))
 
 #String variable holds a word
 
-# words = "apples"
+words = "apples"
 # print(words)
 # #
 # print(type(words))
-# print(words*age)
+# print(words*decimalStuff)
 
 # # Break sequences in strings
 # moreWords = "This is a test to see what happens"
@@ -50,41 +47,44 @@ print("something") # This is me printing
 # print(moreWords)
 #
 # #formated strings
-# age = 45
-# first = "Tom"
-# last = "Smith"
-# full = str(age)+" "+last
+age = 45
+first = "Tom"
+last = "Smith"
+full = str(age)+" "+last
+# print(full)
+# # # #
+# full = f"{first} {last} is {age} years old"
 # print(full)
 # # #
-# full = f"{first} {last}"
-# print(full)
-# #
-# full = f"{4} \n {5+6+56} {first}"
+# full = f"{age/4} \n {5+6+56} {first}"
 # print(full)
 
 
 #Boolean Variables hold conditions True or False (Must be capitalized)
 
-# condition = True
-# otherCondition = False
+condition = True
+otherCondition = False
 #
 # if (condition):
 #     print("This is true")
-# else:
+#     if (otherCondition):
+#         print("It is also false")
+#     print("It is also false2")
+# elif(otherCondition):
 #     print("Not true")
 
 #Programs get executed from top to bottom. If you use the same variable it gets overridden
 
-# age = 56
-# age1 = 67
+age = 56
+age1 = 67
 # print(age)
-# decimalStuff = 12.3
+decimalStuff = 12.3
 # You can do math
 
-# age2 = age+decimalStuff
-# age3 = age/decimalStuff
-# age4 = age-decimalStuff
-# age5 = age*decimalStuff
+age2 = age+decimalStuff
+age3 = age/decimalStuff
+age4 = age-decimalStuff
+age5 = age2*decimalStuff
 # print(age2)
 # print(age3)
 # print(age4)
@@ -92,7 +92,7 @@ print("something") # This is me printing
 #
 # Extra math
 # // gives you the whole number. Gets rid of the numbers left of the decimal
-# age6 = age//decimalStuff
+age6 = age//decimalStuff
 # print(age6)
 #
 # # % is known as the mod. It returns the remainder of the division
@@ -100,8 +100,8 @@ print("something") # This is me printing
 # print(age7)
 #
 # # ** two multiplications is the exponent. It is age to the power of decimalStuff
-# age8 = 4**2
-# print(age8)
+age8 = 6**3
+print(age8)
 
 # Augmented operators
 # newAge = 20
@@ -286,6 +286,12 @@ age = 45
 #     # If not it will go on forever.
 # print("Just right")
 
+
+#
+# sinStuff = math.sin(35)
+# print(sinStuff)
+# cosStuff = math.cos(45)
+# print(cosStuff)
 
 # Lists
 
