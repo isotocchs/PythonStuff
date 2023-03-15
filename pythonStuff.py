@@ -22,7 +22,6 @@ age = 5
 #floating point variable holds a decimal
 
 decimalStuff = 12.0
-age = 10
 # print(decimalStuff)
 # print(type(decimalStuff))
 
@@ -32,10 +31,14 @@ words = "apples"
 # print(words)
 # #
 # print(type(words))
-# print(words*decimalStuff)
+# print(words*age)
+
+# booleans = True
+# print(booleans)
+# print(type(booleans))
 
 # # Break sequences in strings
-# moreWords = "This is a test to see what happens"
+moreWords = "This is a test to see what happens"
 # print(moreWords)
 # moreWords = "This is a \"test to see what\" happens"
 # print(moreWords)
@@ -53,25 +56,28 @@ last = "Smith"
 full = str(age)+" "+last
 # print(full)
 # # # #
-# full = f"{first} {last} is {age} years old"
-# print(full)
+things = f"{first} {last} is {age} years old"
+# print(things)
 # # #
-# full = f"{age/4} \n {5+6+56} {first}"
+full = f"{age/4} \n {5+6+56} {first}"
 # print(full)
 
 
 #Boolean Variables hold conditions True or False (Must be capitalized)
 
-condition = True
+condition = False
 otherCondition = False
 #
 # if (condition):
 #     print("This is true")
-#     if (otherCondition):
+#     if (condition):
 #         print("It is also false")
-#     print("It is also false2")
+#         print("It is also false2")
 # elif(otherCondition):
 #     print("Not true")
+# else:
+#     print("Something else")
+
 
 #Programs get executed from top to bottom. If you use the same variable it gets overridden
 
@@ -100,35 +106,35 @@ age6 = age//decimalStuff
 # print(age7)
 #
 # # ** two multiplications is the exponent. It is age to the power of decimalStuff
-age8 = 6**3
-print(age8)
+age8 = 67**2
+# print(age8)
 
 # Augmented operators
-# newAge = 20
+newAge = 20
 # #
 # newAge = newAge + 5
 # print(newAge)
 # #
-# newAge += 5
+newAge += 5
 # print(newAge)
 # #
 # newAge = newAge - 10
 # print(newAge)
 # #
-# newAge -= 5
+newAge -= 5
 # print(newAge)
 # #
-# newAge *= 2
+newAge *= 2
 # print(newAge)
 # #
-# newAge /= 3
+newAge %= 3
 # print(newAge)
 
 # Order of operations = Same as in math (mod counts as a type of divison)
-# x = 10+3*5
+x = 10+3*5
 # print(x)
 # #
-# x = (10+3)*5
+x = (10+3)**5
 # print(x)
 
 
@@ -146,8 +152,13 @@ print(age8)
 
 # Getting input (by default it is String)
 
-# igujerhb = input("What do you want your number to be?: ")
-# print(10*igujerhb)
+igujerhb = input("What do you want your number to be?: ")
+print(igujerhb)
+# intTest = int(igujerhb)
+floatTest = float(igujerhb)
+# print(intTest)
+print(floatTest)
+
 
 # if you want an integer so you can do math you have to recast it
 # to print it you have to recast it as a string
