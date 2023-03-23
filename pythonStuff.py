@@ -152,12 +152,25 @@ x = (10+3)**5
 
 # Getting input (by default it is String)
 
-igujerhb = input("What do you want your number to be?: ")
-print(igujerhb)
+# number1 = float(input("What do you want your first number to be?: "))
+# number2 = float(input("What do you want your second number to be?: "))
+# input3 = input("What do you want to do? (add, sub, mult, div)")
+# if(input3 == "add"):
+#     print(f"This is the addition result: {number1+number2}")
+# if(number1+number2 >= 200):
+#             print("This is a big number")
+# if(input3 == "mult"):
+#     print(f"This is the multiplication result: {number1*number2}")
+# if(input3 == "sub"):
+#     print(f"This is the subtraction result: {number1-number2}")
+# if(input3 == "div"):
+#     print(f"This is the division result: {number1/number2}")
+
+
+
+
 # intTest = int(igujerhb)
-floatTest = float(igujerhb)
 # print(intTest)
-print(floatTest)
 
 
 # if you want an integer so you can do math you have to recast it
@@ -188,21 +201,27 @@ print(floatTest)
 # Some built in functions
 
 name = "matt smith"
-age = 45
-
-#
+firstName = "matt"
+lastName = "smith"
+# age = 45
+# #
 # print(name.capitalize())
+# print(f"{firstName.capitalize()} {lastName.capitalize()}")
 # print(name.upper())
 # print(name.lower())
 # print(name.isprintable())
 # print(name.__len__())
+# print(len(name))
 #
 # # Think of a String as a list of characters. The list starts with 0
 
 
-# name = "matt smith"
-# print(name.find("s"))
+name = "matt Smith"
+name = name.lower()
+# print(name.find("smith"))
+# print(name.__contains__("th"))
 # # #
+# name = name.replace("matt", "john")
 # print(name.replace("t", "johnson"))
 # print(name)
 
@@ -212,7 +231,9 @@ age = 45
 #
 # #Using the in operator
 #
-# print("th" in name)
+name2 = "matt"
+# print(name2 in name)
+# print(name.__contains__(name2))
 # print("bob" in name)
 # #
 # name = name.replace("smith", "johnson")
@@ -225,37 +246,37 @@ age = 45
 
 # Comparison operators
 
-# isit = 3 > 2
+isit = 3 > 2
 # print(isit)
 # # # #
-# isit = 3 < 2
+isit = 3 < 2
 # print(isit)
 # # # #
-# isit = 3 >= 2
+isit = 3 >= 2
 # print(isit)
 # # # #
-# isit = 3 <= 2
+isit = 3 <= 2
 # print(isit)
 # #
-# isit = 3 == 2
+isit = 3 == 2
 # print(isit)
 # # # #
 # # # ! means NOT
-# isit = 3 != 2
+isit = 3 != 2
 # print(isit)
 # # # #
 # # # # # not means NOT when you want the opposite of something
-# tom = not isit
+tom = not isit
 # print(tom)
 # print(not tom)
 
 # Logical operators ->  and  or
 
-# age = 45
+age = 45
 # print(age>35)
 #
 #
-# print(age<60 and age<50)
+# print(age>60 and age<20)
 #
 #
 # print(age>50 or age <49)
@@ -265,37 +286,43 @@ age = 45
 
 # if elif else
 #
-# tom = 10
-#
+tom = 10
+
 # if (tom<35):
 #     print("He is young")
 # elif (tom<12):
 #     print("He is very young")
+# elif (tom>11):
+#     print("He is very young 2")
+# elif (tom>9):
+#     print("He is very young 3")
 # else:
 #     print("He is old")
 #     print("this is the end")
 
 #in one line if not complex
-# tom = 45
-# if (tom<35):
-#     message = "He is young"
-# else:
-#     message = "He is old"
+tom = 45
+if (tom<35):
+    message = "He is young"
+else:
+    message = "He is old"
 # print(message)
 #
-# message = "He is young" if tom<35 else "He is old 1"
+message = "He is young" if tom<35 else "He is old 1"
 # print(message)
 
 
 
 # while loops
 
-# price = 20
+price = 20
 # while (price>10):
-#     print("Too much")
-#     price -= 1 # must make sure to have something in the loop to terminate the sequence by making the condition false. 
+#     print(str(price) + " is Too much")
+#     price -= 1 
+#     # must make sure to have something 
+#     # in the loop to terminate the sequence by making the condition false. 
 #     # If not it will go on forever.
-# print("Just right")
+# print(str(price) + " is Just right")
 
 
 #
@@ -306,49 +333,56 @@ age = 45
 
 # Lists
 
-# names = ["Bob", "Tom", "John", "Matt", "James"]
+names = ["Bob", "Tom", "John", "Matt", "James"]
+
+# print(names)
 #
 # print(names.__len__())
-# print(names[-2]) # remember index starts at 0
+# print(names.__contains__("Bob"))
+# print(names[1])
+# print(names[-3]) # remember index starts at 0
+# print(names[names.__len__()- 1]) # remember index starts at 0
 # names[2] = "Ash" # replace 
 # print(names)
-# print(names[1:4]) # just want a few
+# print(names[3:names.__len__()]) # just want a few
 
-# something = "Tom Smith"
+# something = "Tom SmiTh"
+# something = something.lower()
 # print(something[1:4])
 # print(something.replace("o", "i"))
-# print(something.__contains__("mit "))
-#
+# print(something.__contains__("smit"))
+
 #
 numbers = [1,2,5,8,34,25,16,1,2,3,2,4,2]
-
+# print(numbers)
 # print(numbers.__len__())
-# print(numbers[13]) # don't go over
+# print(numbers[12]) # don't go over
 # print(numbers[-1]) # the last one
 # print(numbers[-4]) # second to last one
 #
 # # List operations
-# numbers.append(3)
+numbers.append(3)
 # print(numbers)
-# numbers.insert(4, 90)
+numbers.insert(4, 90)
 # print(numbers)
-# numbers.remove(2)
+numbers.remove(3)
 # print(numbers)
 # # numbers.remove(2)
-# while (numbers.__contains__(2)):
+# while (2 in numbers):
 #     numbers.remove(2)
 # print(numbers)
 #
 # print(numbers.__contains__(3))
 # print(len(numbers)) # how many elements
-# print(numbers.count(2)) # how many 2 are in the list
-# print(numbers.index(100)) # where is 34?
+# print(numbers.__len__())
+# print(numbers.count(78)) # how many 2 are in the list
+# print(numbers.index(34)) # where is 34?
 # numbers.clear()
 # print(numbers)
 
 #check for info in list
-# numbers = [1,2,5,8,34,25,16]
-# names = ["Bob", "Tom", "John", "Matt", "James"]
+numbers = [1,2,5,8,34,25,16]
+names = ["Bob", "Tom", "John", "Matt", "James"]
 #
 # print("Tom" in numbers)
 # print(2 in numbers)
@@ -361,9 +395,10 @@ numbers = [1,2,5,8,34,25,16,1,2,3,2,4,2]
 numbers = [1,2,5,8,34,25,16]
 names = ["Bob", "Tom", "John", "Matt", "James"]
 
-# for things in numbers:
-#     print(things+things)
+# for bottle in numbers:
+#     print(bottle+bottle)
 # #
+# print(bottle+bottle)
 # for apples in names:
 #     print("This is the name: "+apples)
 
@@ -372,7 +407,7 @@ names = ["Bob", "Tom", "John", "Matt", "James"]
 # while (index<len(numbers)):
 #     print(numbers[index])
 #     index+=1
-# #
+#
 # # # while loops give you more flexibility
 # index = len(numbers)-1
 # while(index>=0):
@@ -382,13 +417,15 @@ names = ["Bob", "Tom", "John", "Matt", "James"]
 
 
 # Using range funciton
-# numbers2 = range(0,101)
+numbers2 = range(0,102)
 # print(numbers2)
 # # #
-# for things in numbers2:
-#     print(things)
-    
-# numbers3 = range(50,101)
+# for bubbles in numbers2:
+#     print(bubbles*2)
+
+# print(bubbles)
+
+# numbers3 = range(-50,10100)
 # for things in numbers3:
 #     print(things)
 
@@ -403,30 +440,32 @@ names = ["Bob", "Tom", "John", "Matt", "James"]
 # print("done")
 
 # functions
-# def goingUp (number, upBy):
-#     finalNum = number+upBy
-#     return finalNum
+def goingUp (number, upBy):
+    finalNum = number+upBy
+    return finalNum
+
+
 #
-# info = goingUp(10,15)
+info = goingUp(10,15)
 # print(info)
 #
 # #Using it from somewhere else
-# import moreTesting
+import moreTesting
 # #
-# info2 = moreTesting.moreStuff(10, 15)
+info2 = moreTesting.moreStuff(30, 15)
 # print(info2)
 # # # #
-# info3 = moreTesting.moreStuff(10.5)
+info3 = moreTesting.moreStuff(50)
 # print(info3)
 # #
-# info4 = moreTesting.moreStuff()
+info4 = moreTesting.moreStuff()
 # print(info4)
 # # # #
-# apples = [10, 4, 5, 7]
-# # print(moreTesting.moreStuff(apples))
+apples = [10, 4, 5, 7]
+# print(moreTesting.moreStuff(apples))
 #
-# for something in apples:
-#     print(moreTesting.moreStuff(something))
+for something in apples:
+    print(moreTesting.moreStuff(something))
 
 # groups = ["Group 1","Group 2","Group 3","Group 4","Group 5","Group 6","Group 7"]
 # groupsRand=[]
