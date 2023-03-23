@@ -368,8 +368,8 @@ numbers.insert(4, 90)
 numbers.remove(3)
 # print(numbers)
 # # numbers.remove(2)
-# while (2 in numbers):
-#     numbers.remove(2)
+while (2 in numbers):
+    numbers.remove(2)
 # print(numbers)
 #
 # print(numbers.__contains__(3))
@@ -406,7 +406,7 @@ names = ["Bob", "Tom", "John", "Matt", "James"]
 # index = 0
 # while (index<len(numbers)):
 #     print(numbers[index])
-#     index+=1
+#     index+=2
 #
 # # # while loops give you more flexibility
 # index = len(numbers)-1
@@ -417,11 +417,11 @@ names = ["Bob", "Tom", "John", "Matt", "James"]
 
 
 # Using range funciton
-numbers2 = range(0,102)
+numbers2 = range(0,101)
 # print(numbers2)
-# # #
+# # # #
 # for bubbles in numbers2:
-#     print(bubbles*2)
+#     print(bubbles)
 
 # print(bubbles)
 
@@ -431,7 +431,7 @@ numbers2 = range(0,102)
 
 # break - get out of loop
 
-# numbers3 = range(0,20)
+numbers3 = range(0,20)
 # for stuff in numbers3:
 #     if (stuff == 4):
 #         print("Found it")
@@ -440,43 +440,40 @@ numbers2 = range(0,102)
 # print("done")
 
 # functions
-def goingUp (number, upBy):
-    finalNum = number+upBy
-    return finalNum
+def goingUp (number=5, upBy=5):
+     return number+upBy
 
-
-#
-info = goingUp(10,15)
+# info = goingUp()
 # print(info)
 #
 # #Using it from somewhere else
-import moreTesting
+import moreTesting as mt
 # #
-info2 = moreTesting.moreStuff(30, 15)
+info2 = mt.moreStuff(30, 15)
 # print(info2)
 # # # #
-info3 = moreTesting.moreStuff(50)
+info3 = mt.moreStuff(50)
 # print(info3)
 # #
-info4 = moreTesting.moreStuff()
+# info4 = moreTesting.moreStuff()
 # print(info4)
 # # # #
 apples = [10, 4, 5, 7]
 # print(moreTesting.moreStuff(apples))
 #
-for something in apples:
-    print(moreTesting.moreStuff(something))
+# for something in apples:
+#     print(moreTesting.moreStuff(something))
 
-# groups = ["Group 1","Group 2","Group 3","Group 4","Group 5","Group 6","Group 7"]
-# groupsRand=[]
-# index = 0
-# while (index<groups.__len__()):
-#     randChoice = random.choice(groups)
-#     if (not groupsRand.__contains__(randChoice)):
-#         groupsRand.append(randChoice)
-#         index+=1
+groups = ["Group 1","Group 2","Group 3","Group 4","Group 5","Group 6","Group 7"]
+groupsRand=[]
+index = 0
+while (index<groups.__len__()):
+    randChoice = random.choice(groups)
+    if (not groupsRand.__contains__(randChoice)):
+        groupsRand.append(randChoice)
+        index+=1
 
-# print(groupsRand)
+print(groupsRand)
 # print("Change testing 6")
 
 print("-----------------------")
