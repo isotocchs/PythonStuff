@@ -3,9 +3,10 @@
 import PySimpleGUI as sg
 
 title = "Conversion"
+spinList = ["item1", "item2","item3", "item4"]
 
 layout = [
-    [sg.Text("Test"),sg.Spin(["item1", "item2"])],
+    [sg.Text("Test"),sg.Spin(spinList)],
     [sg.Button("Button Stuff")],
     [sg.Input()]
 ]
