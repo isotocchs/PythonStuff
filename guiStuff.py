@@ -1,5 +1,4 @@
 # Put in terminal: pip3 install pysimplegui
-import math
 import PySimpleGUI as sg
 
 title = "Conversion"
