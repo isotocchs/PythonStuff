@@ -5,13 +5,14 @@ title = "Conversion"
 spinList = ["item1", "item2","item3", "item4"]
 
 layout = [
-    [sg.Text("Test", font=("Arial",45), key="TextBox1"),sg.Spin(spinList, size=(10,1),font=("Arial",45))],
+    [sg.Text("Test", font=("Arial",45), key="TextBox1", text_color="Blue"),sg.Spin(spinList, size=(10,3),font=("Arial",45))],
     [sg.Button("Button Stuff", font=("Arial",45), key="Button1")],
-    [sg.Input(font=("Arial",45), size=(20,1))]
+    [sg.Input(font=("Arial",45), size=(20,1), background_color="Teal")]
     # [sg.Button("Button Stuff", key="Button2")],
     # [sg.Text("Testing Events",font=("Arial",45), enable_events=True, key="TextBox2")]
 ]
 
+# color Options : Black, Blue, Green, Teal, Brown, Yellow, Gray, Purple
 
 sg.Window(title, layout).read()
 
