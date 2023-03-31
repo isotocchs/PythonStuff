@@ -7,8 +7,8 @@ spinList = ["in to ft", "ft to in","meter to ft", "ft to meter"]
 layout = [
     [sg.Input(font=("Arial",45), size=(20,1), background_color="Green", key="InputBox1"),
     sg.Spin(spinList, size=(10,3),font=("Arial",45), key="ItemSpin"), 
-    sg.Button("Convert", font=("Arial",45), key="Button1")],
-    [sg.Text("Test", font=("Arial",45), enable_events=True, key="TextBox1", text_color="Blue")]
+    sg.Button("Convert", font=("Arial",45), key="ConvButt")],
+    [sg.Text("Conversion Result", font=("Arial",45), key="TextBox1", text_color="Blue")]
     # [sg.Input(font=("Arial",45), size=(20,1), background_color="Teal", key="InputBox2")],
     # [sg.Button("OK", font=("Arial",45), key="Button3")],
     # [sg.Button("Change Element", font=("Arial",45), key="Button4")]
@@ -40,30 +40,61 @@ while True:
 
 
     #Printing Values
-    if event == "Button1":
+    if event == "ConvButt":
         print("-------------------")
         print("Printing the Values")
-        itemSpinInfo = values["ItemSpin"]
-        inputBox1Info = values["InputBox1"]
-        inputBox2Info = values["InputBox2"]
-        if inputBox1Info.isnumeric():
-            print("Thank you for putting in a number")
-        else:
-            print("Please put in a number")
+        print(values["InputBox1"])
+        match values["ItemSpin"]:
+            case "in to ft":
+                output = "We Selected in to ft"
+            case "ft to in":
+                output = "We Selected ft to in"
+            case "meter to ft":
+                output = "We Selected meter to ft"
+            case "ft to meter":
+                output = "We Selected ft to meter"
 
-        if itemSpinInfo == "item3":
-            print("I have selected Item 3")
-        else: 
-            print("I have not selected Item 3")
+        myAppWindow["TextBox1"].update(output)
+        # print(values["ItemSpin"])
+        # itemSpinInfo = values["ItemSpin"]
+        # print(itemSpinInfo)
+
+
+        # inputBox1Info = values["InputBox1"]
+        # print(inputBox1Info)
+        # if inputBox1Info.isnumeric():
+        #     print(float(inputBox1Info)*5)
+        #     myAppWindow["TextBox1"].update(float(inputBox1Info)*5)
+        # else:
+        #     print("Please put in a number")
+        #     myAppWindow["TextBox1"].update(inputBox1Info)
+
+
+        # inputBox2Info = values["InputBox2"]
+        # if inputBox1Info == "Apples":
+        #     print("You've selected tjhe best fruit")
+        # else:
+        #     print("You have the wrong fruit")
+        # if inputBox1Info.isnumeric():
+        #     print("Thank you for putting in a number")
+        # else:
+        #     print("Please put in a number")
+
+        # if itemSpinInfo == "ft to in":
+        #     print("I have selected ft to in")
+        # else: 
+        #     print("I have not selected ft to in")
         print("-------------------")
     
+
+
     if event == "TextBox1":
         print("-------------------")
         print("I've clicked on the text")
         # print(values)
         print("-------------------")
 
-    if event == "Button2":
+    if event == "Button4":
         print("-------------------")
         print("Printing the Values from only the input box")
         # print(values["InputBox1"])
@@ -77,15 +108,17 @@ while True:
 
         # we can test several cases with a match case clause
         match values["ItemSpin"]:
-            case "item1":
-                output = "We Selected Item 1"
-            case "item2":
-                output = "We Selected Item 2"
-            case "item3":
-                output = "We Selected Item 3"
-            case "item4":
-                output = "We Selected Item 4"
-        print(output)
+            case "in to ft":
+                output = "We Selected in to ft"
+            case "ft to in":
+                output = "We Selected ft to in"
+            case "meter to ft":
+                output = "We Selected meter to ft"
+            case "ft to meter":
+                output = "We Selected ft to meter"
+
+        myAppWindow["TextBox1"].update(output)
+
         print("-------------------")
 
     #Updating Elements
