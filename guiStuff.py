@@ -43,7 +43,8 @@ while True:
     if event == "ConvButt":
         print("-------------------")
         print("Printing the Values")
-        print(values["InputBox1"])
+        something = values["InputBox1"]
+        somerith = float(something)
         match values["ItemSpin"]:
             case "in to ft":
                 output = "We Selected in to ft"
