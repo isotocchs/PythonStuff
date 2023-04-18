@@ -1,5 +1,10 @@
 import PySimpleGUI as sg
 
+sg.theme("dark")
+# sg.theme("ksejfksjdhf")
+# sg.set_options(font=("Arial",45))
+
+#all options available (https://www.pysimplegui.org/en/latest/call%20reference/#application-wide-configuration-settings-set_options-etc)
 
 title = "Calculator"
 layout = [[sg.Text("Output", font=("Arial",45))],
