@@ -8,11 +8,11 @@ def create_window(themeInput):
     #all options available (https://www.pysimplegui.org/en/latest/call%20reference/#application-wide-configuration-settings-set_options-etc)
     button_size = (2,1) #size not in pixels but in characters
 
-    title = "Calculator" #
+    title = "Calculator" # right_click_menu=theme_menu
     layout = [[sg.Text("Apples", 
                         expand_x= True, 
                         justification="right", 
-                        pad=(10,20), 
+                        pad=(10,20),
                         right_click_menu=theme_menu)],
             [sg.Button("Clear", expand_x=True),sg.Button("Enter", expand_x=True)],
             [sg.Button(7, size=(2,1)),sg.Button(8, size=(2,1)),sg.Button(9, size=(2,1)),sg.Button("*", size=(2,1))],
